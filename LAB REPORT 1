@@ -1,0 +1,19 @@
+In Lab 1 of CSE15L, we learned some basic UNIX commands to work on a file. Here is some information that I learned:
+1. Command Name : cd
+    a. Using the command with no arguments.
+      
+    b. Using the command with a path to a directory as an argument.
+
+    c. Using the command with a path to a file as an argument.
+
+2. Command Name : ls
+    a. Using the command with no arguments.
+       
+    b. Using the command with a path to a directory as an argument.
+
+    c. Using the command with a path to a file as an argument.
+
+3. Command cat : 
+    a. Using the command with no arguments.
+    b. Using the command with a path to a directory as an argument.
+    c. Using the command with a path to a file as an argument.
