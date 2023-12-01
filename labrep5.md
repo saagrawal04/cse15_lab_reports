@@ -1,18 +1,19 @@
 Part 1
-1. 
-2. TA suggestion : Your code doesnt seem to correctly handle cases where two equal strings are adjacent in list2. Take a look at the condition you have added in the last two while conditions
-                   Do you really need the if statements there?
- 3. Fixed Code
+1. ![Image](13.png)
+2. TA suggestion : Your code doesnt seem to correctly handle cases where two equal strings are adjacent in list2. Take a look at the condition you have added in the last two while conditions. Think about whether you really need the if statements there?
+ 3. There was an error because the condition after while statements in the merge method may lead to incorrect merging of the lists, 
+especially when dealing with equal strings.
+![Image](14.png)
+
+4.
+Directory Structure:
+/Users/saloniagrawal/lab7/
 
 
-
-There was an error because the condition after while statements in the merge method may lead to incorrect merging of the lists, 
-especially when dealing with equal strings.  
-
-4.Before Changing Code
+Before Changing Code
 
 
-#########
+#########ListExamples.java#########3
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,7 +64,33 @@ class ListExamples {
     }
     return result;
   }
-#########
+#########End###########
+
+#########ListExamplesTests.java###########
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.*;
+import java.util.ArrayList;
+
+
+public class ListExamplesTests {
+	@Test(timeout = 500)
+	public void testMerge1() {
+    		List<String> l1 = new ArrayList<String>(Arrays.asList("x", "y"));
+		List<String> l2 = new ArrayList<String>(Arrays.asList("a", "b"));
+		assertArrayEquals(new String[]{ "a", "b", "x", "y"}, ListExamples.merge(l1, l2).toArray());
+	}
+	
+	@Test(timeout = 500)
+        public void testMerge2() {
+		List<String> l1 = new ArrayList<String>(Arrays.asList("a", "b", "c"));
+		List<String> l2 = new ArrayList<String>(Arrays.asList("c", "d", "e"));
+		assertArrayEquals(new String[]{ "a", "b", "c", "c", "d", "e" }, ListExamples.merge(l1, l2).toArray());
+        }
+
+}
+
+########## end ############
 
 
 
@@ -116,6 +143,6 @@ class ListExamples {
     return result;
   }
   ########
-
+I removed the if statements after while that were preventing addition of strings when they were common to both lists.
 Part 2
-I learnt 
+The best thing I learnt in lab was bash scriptng. I recently took up a research which involves me having to regularly ssh into a remote comoputer and run some routine commands almost everyday before I work. Earlier, I was writing these commands every time which used to take a lot of redunndant work and time. After I learnt bash scripting, I created files that stored each of the sequence of commands I had to run and now I just run those files, making my work soooo much quicker.
